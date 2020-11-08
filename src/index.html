@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>Alejandro Losa - Desarrollador Full Stack</title>
 
     <!-- Styles -->
@@ -10,16 +10,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link href="styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/kursor/dist/kursor.css">
 </head>
 
 <body>
     <!-- Header -->
     <header class="header">
-        <a id="logo" class="iso-link ch-left" href="index"><img src="../resources/logoblack.svg" alt="Isotipo"></a>
-        <a id="logo-on" class="iso-link ch-left" href="index"><img src="../resources/logoanimadp.svg" alt="Isotipo"></a>
+        <a id="logo" class="iso-link ch-left" href="index"><img id="lgo" src="../resources/logoblack.svg" alt="Isotipo"></a>
 
-        <div class="container-header">
-            <a href="#" class="link-main">Sobre mi</a>
+        <div class="container-header ch-mid">
+            <a href="#" class="link-main">Servicios</a>
             <a href="#" class="link-main">Habilidades</a>
             <a href="#" class="link-main">Proyectos</a>
             <a href="#" class="link-main">Contacto</a>
@@ -34,8 +34,22 @@
 
     <!-- Main -->
     <main>
-        <h1 class="titulo">Hola! Soy Alejandro. <br>Desarrollador full stack.</h1>
+        <article class="section-main">
+            <!-- &#128760 -->
+            <h1 class="titulo-mobile">Hola! Soy <span class="color-especial">Alejandro</span>.<br>Desarrollador <span class="color-especial">Full</span> stack.</h1>
+            <h1 class="titulo">Hola!<br> Soy <span class="color-especial">Alejandro</span>.<br>Desarrollador<br><span class="color-especial">Full</span> stack.</h1>
+            <h2 class="subtitulo">¿Todavía no estás en Internet?<br>Actualízate al siglo XXI.</h2>
+            <button id="cta" class="btn-grad">Contáctame</button>
+        </article>
+
+        <!-- <img class="imagen-main" src="../resources/undraw_accept_tasks_po1c.svg" alt="Ilustración"> -->
+        <img class="imagen-main-2" src="../resources/coding_ (1).svg" alt="Ilustración">
     </main>
+
+    <!-- Servicios -->
+    <section>
+        <h2>¿Que ofrezco?</h2>
+    </section>
     
 </body>
 
@@ -49,21 +63,23 @@
 
     <!-- Kursor.js -->
     <script src="https://cdn.jsdelivr.net/npm/kursor@0.0.14/dist/kursor.js"></script>
-
     <script>
         new kursor({
-            type: 3,
+            type: 4,
             removeDefaultCursor: true,
-            color: "#171717"
+            color: "#000"
         })
 
-        $('#logo').on('mouseover', function(){
-            $(this).css("display", "none");
-            $('#logo-on').css("display", "inline");
+        $('#logo').on('mouseenter', () => {
+            $('#lgo').attr('src', '../resources/logoanimadp.svg');
+        })
+        .on('mouseout', () => {
+            $('#lgo').attr('src', '../resources/logoblack.svg');
         });
-        $('#logo').on('mouseout', function(){
-            $(this).css("display", "inline");
-            $('#logo-on').css("display", "none");
-        });
+
+        $('#cta').on('click', () => {
+            window.location.href = "https://wa.me/+34653162169";
+        })
+
     </script>
 </html>

@@ -1,3 +1,6 @@
+html{
+    scroll-behavior: smooth;
+}
 body{
     color:#171717;
     font-family: 'Rubik', sans-serif;
@@ -10,6 +13,18 @@ a{
     color: #171717;
     text-decoration: none !important;
 }
+.blanco {
+    color: #fafafa !important;
+}
+.blanco:hover{
+    color: #171717 !important;
+}
+.blanco-social {
+    color: #fafafa !important;
+}
+.blanco-social:hover{
+    color: #11ffbd !important;
+}
 .header{
     display: flex;
     justify-content: space-between;
@@ -19,12 +34,12 @@ a{
     position: fixed;
     z-index: 2;
     top: 0;
+    transition: .25s ease-in-out;
 }
 .headeroff {
-    background: #fff;
-    -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
-    -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
-    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+    background: #171717;
+    height: 6rem;
+    transition: .25s ease-out;
 }
 .iso-link{
     width: 3.6rem;
@@ -155,6 +170,55 @@ a{
     display: none;
 }
 
+
+/* Servicios */
+.titulo-h2{
+    font-size: 3.75rem;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 2rem;
+}
+.texto-servicio{
+    font-size: 1.75rem;
+    font-weight: 400;
+    text-align: center;
+    width: 60%;
+    margin: 1rem auto 0 auto;
+}
+.section-servicios{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 96%;
+    margin: 4rem auto;
+}
+.section-servicios > article{
+    display: flex;
+    width: 32%;
+    height: 15rem;
+    border-radius: 2rem;
+    background-color: #171717;
+    -webkit-box-shadow: 0px 18px 42px -3px rgba(0,0,0,0.1); 
+    box-shadow: 0px 18px 42px -3px rgba(0,0,0,0.1);
+    color: #fafafa;
+    justify-content: center;
+    align-items: center;
+}
+.section-servicios > article > div{
+    width: 100%;
+}
+.section-servicios > article > div > h3{
+    font-weight: 500;
+    font-size: 1.8rem;
+}
+.section-servicios > article > div > p{
+    font-weight: 300;
+    font-size: 1.25rem;
+}
+.imagen-icono{
+    width: 40%;
+}
+
 @media (max-width: 1520px){ /* Portatil */
     .titulo{
         font-size: 4.8rem;
@@ -170,6 +234,23 @@ a{
         width: 50%;
         margin-right: 2%;
         margin-top: 1rem;
+    }
+
+    /* Servicios */
+    .section-servicios > article{
+        width: 32%;
+        height: 13rem;
+    }
+    .section-servicios > article > div > h3{
+        font-weight: 500;
+        font-size: 1.5rem;
+    }
+    .section-servicios > article > div > p{
+        font-weight: 300;
+        font-size: 1.1rem;
+    }
+    .imagen-icono{
+        width: 32%;
     }
 }
 
@@ -270,9 +351,134 @@ a{
           -o-transform: translateY(-13px) rotate(-45deg);
           transform: translateY(-13px) rotate(-45deg);
       }
+
+      /* Servicios */
+      .section-servicios{
+          flex-direction: column;
+      }
+      .section-servicios > article{
+          width: 85%;
+          height: 15rem;
+          margin-bottom: 2rem;
+       }
+    .section-servicios > article > div > h3{
+        font-weight: 500;
+        font-size: 2.1rem;
+    }
+    .section-servicios > article > div > p{
+        font-weight: 300;
+        font-size: 1.5rem;
+        width: 90%;
+        margin: auto;
+    }
+    .imagen-icono{
+        width: 25%;
+    }
+    .titulo-h2{
+        font-size: 2.25rem;
+        font-weight: 600;
+        text-align: center;
+        margin-top: 2rem;
+    }
+    .texto-servicio{
+        font-size: 1.25rem;
+        font-weight: 400;
+        text-align: center;
+        width: 60%;
+        margin: 1rem auto 0 auto;
+    }
 }
 
-@media (max-width: 992px){ /* Mobile */
+@media (max-width: 768px) and (orientation: portrait){ /* Tablet */
+    main{
+        flex-direction: column-reverse;
+    }
+    .link-socials{
+        display: none;
+    }
+    .header{
+        height: 6rem;
+    }
+    .iso-link{
+        width: 3.2rem;
+    }
+    .ch-right{
+        margin-right: 2em;
+    }
+    .ch-left{
+        margin-left: 2rem;
+    }
+    .section-main{
+        width: 100%;
+        margin: 2rem auto;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .titulo{
+        display: none;
+    }
+    .titulo-mobile{
+        display: inline;
+        font-size: 4.2rem;
+        text-align: center;
+        font-weight: 600;
+        width: 80%;
+        margin: 2.3rem auto 0 auto;
+    }
+    .subtitulo{
+        font-size: 1.8rem;
+        font-weight: 500;
+        margin: 1rem auto 0 auto;
+        text-align: center;
+     }
+     .imagen-main-2{
+        width: 65%;
+        margin: 0rem 0 -5rem 0;
+    }
+    .btn-grad {
+        margin: 3rem auto 0 auto;
+        width: 16rem;
+    }
+    
+      /* Servicios */
+      .section-servicios{
+          flex-direction: column;
+      }
+      .section-servicios > article{
+          width: 85%;
+          height: 15rem;
+          margin-bottom: 2rem;
+       }
+    .section-servicios > article > div > h3{
+        font-weight: 500;
+        font-size: 2.1rem;
+    }
+    .section-servicios > article > div > p{
+        font-weight: 300;
+        font-size: 1.5rem;
+        width: 90%;
+        margin: auto;
+    }
+    .imagen-icono{
+        width: 25%;
+    }
+    .titulo-h2{
+        font-size: 3rem;
+        font-weight: 600;
+        text-align: center;
+        margin-top: 2rem;
+    }
+    .texto-servicio{
+        font-size: 1.6rem;
+        font-weight: 400;
+        text-align: center;
+        width: 90%;
+        margin: 1rem auto 0 auto;
+    }
+}
+
+@media (max-width: 600px){ /* Mobile */
     .section-main{
         width: 90%;
         margin: 2rem auto;
@@ -283,12 +489,15 @@ a{
     .header{
         height: 5rem;
     }
+    .headeroff {
+        height: 4rem;
+    }
     .titulo-mobile{
         display: inline;
         font-size: 2.5rem;
         text-align: center;
         font-weight: 600;
-        margin: 0;
+        margin: 0 auto;
         line-height: 2.9rem;
     }
     .subtitulo{
@@ -309,5 +518,36 @@ a{
     }
     .iso-link{
         width: 2.8rem;
+    }
+
+    /* Servicios */
+    .section-servicios > article{
+        width: 95%;
+        display: flex;
+        flex-direction: column;
+     }
+     .section-servicios > article > div > h3{
+        font-size: 1.5rem;
+        text-align: center;
+    }
+    .section-servicios > article > div > p{
+        font-size: 1.1rem;
+        text-align: center;
+    }
+    .imagen-icono{
+        width: 32%;
+    }
+    .titulo-h2{
+        font-size: 1.9rem;
+        font-weight: 600;
+        text-align: center;
+        margin-top: 3rem;
+    }
+    .texto-servicio{
+        font-size: 1.2rem;
+        font-weight: 400;
+        text-align: center;
+        width: 90%;
+        margin: 1rem auto 0 auto;
     }
 }

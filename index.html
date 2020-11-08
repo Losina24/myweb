@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link href="styles.css" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/kursor/dist/kursor.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
 </head>
 
 <body>
@@ -19,14 +20,14 @@
         <a id="logo" class="iso-link ch-left" href="index"><img id="lgo" src="resources/logoblack.svg" alt="Isotipo"></a>
 
         <div class="container-header ch-mid">
-            <a href="#" class="link-main">Servicios</a>
+            <a href="#servicios-smooth" class="link-main">Servicios</a>
             <a href="#" class="link-main">Habilidades</a>
             <a href="#" class="link-main">Proyectos</a>
             <a href="#" class="link-main">Contacto</a>
         </div>
 
         <div class="container-header ch-right">
-            <a class="link-socials" href="https://wa.me/+34653162169" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            <a class="link-socials" href="https://wa.me/+34" target="_blank"><i class="fab fa-whatsapp"></i></a>
             <a class="link-socials" href="https://www.linkedin.com/in/alejandrolosagarc%C3%ADa/" target="_blank"><i class="fab fa-linkedin-in .text-dark"></i></a>
             <a class="link-socials" href="https://github.com/Losina24" target="_blank"><i class="fab fa-github"></i></a>
             <div class="hamburger" id="hamburger-1">
@@ -51,8 +52,32 @@
     </main>
 
     <!-- Servicios -->
-    <section>
-        <h2>¿Que ofrezco?</h2>
+    <h2 id="servicios-smooth" class="titulo-h2" data-aos="fade-right">¿Qué hago?</h2>
+    <p class="texto-servicio" data-aos="fade-right">Desde el diseño de la interfaz, hasta el mantenimiento y gestión del servidor y la base de datos,  pasando por todo el proceso de desarrollo de la aplicación (web o móvil).</p>
+    <section class="section-servicios">
+        <article data-aos="fade-up">
+            <img class="imagen-icono" src="resources/designer_.svg" alt="Diseño UX/UI">
+            <div>
+                <h3>Diseño UX/UI</h3>
+                <p>Diseño de interfaz y experiencia de usuario. Tanto de aplicaciones móviles, como de páginas web.</p>
+            </div>
+        </article>
+
+        <article data-aos="fade-up">
+            <img class="imagen-icono" src="resources/coding_ (2).svg" alt="Diseño UX/UI">
+            <div>
+                <h3>Desarrollo Web y App</h3>
+                <p>Ya sean aplicaciones móviles o web. Completamente optimizadas para tu negocio.</p>
+            </div>
+        </article>
+
+        <article data-aos="fade-up">
+            <img class="imagen-icono" src="resources/data_and_settings (1).svg" alt="Diseño UX/UI">
+            <div>
+                <h3>Gestión de servidores</h3>
+                <p>¡Enfócate en tu negocio y olvida el mantenimiento! Explota tus recursos y obtén el máximo rendimiento.</p>
+            </div>
+        </article>
     </section>
     
 </body>
@@ -64,25 +89,37 @@
     crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/8d96a2d252.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 
     <!-- Kursor.js -->
     <script src="https://cdn.jsdelivr.net/npm/kursor@0.0.14/dist/kursor.js"></script>
     <script>
-        new kursor({
-            type: 4,
-            removeDefaultCursor: true,
-            color: "#000"
-        })
+        AOS.init();
 
+        new kursor({
+            type: 2,
+            removeDefaultCursor: true,
+            color: "#02edac"
+        })
+        
         $('#logo').on('mouseenter', () => {
-            $('#lgo').attr('src', 'resources/logoanimadp.svg');
+            if($(window).scrollTop() > 50){
+                $('#lgo').attr('src', 'resources/l2.svg');
+            } else {
+                $('#lgo').attr('src', 'resources/logoanimadp.svg');
+            }
+            
         })
         .on('mouseout', () => {
-            $('#lgo').attr('src', 'resources/logoblack.svg');
+            if($(window).scrollTop() > 50){
+                $('#lgo').attr('src', 'resources/l1.svg');
+            } else {
+                $('#lgo').attr('src', 'resources/logoblack.svg');
+            }
         });
 
         $('#cta').on('click', () => {
-            window.location.href = "https://wa.me/+34653162169";
+            window.location.href = "https://wa.me/+34";
         })
         
         $(document).ready(function(){
@@ -94,10 +131,55 @@
         $(window).on("scroll", function() {
             if($(window).scrollTop() > 50) {
                 $(".header").addClass("headeroff");
+                $("#lgo").attr('src', 'resources/l1.svg');
+                $(".link-main").addClass('blanco');
+                $(".link-socials").addClass('blanco-social');
+                $(".line").css('background-color', '#fafafa');
             } else {
-                //remove the background property so it comes transparent again (defined in your css)
-            $(".header").removeClass("headeroff");
+                $(".header").removeClass("headeroff");
+                $("#lgo").attr('src', 'resources/logoblack.svg');
+                $(".link-main").removeClass('blanco');
+                $(".link-socials").removeClass('blanco-social');
+                $(".line").css('background-color', '#171717');
             }
         });
+
+        // Smooth scrolling
+        $('a[href*="#"]')
+        // Remove links that don't actually link to anything
+        .not('[href="#"]')
+        .not('[href="#0"]')
+        .click(function(event) {
+            // On-page links
+            if (
+            location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
+            && 
+            location.hostname == this.hostname
+            ) {
+            // Figure out element to scroll to
+            var target = $(this.hash);
+            target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+            // Does a scroll target exist?
+            if (target.length) {
+                // Only prevent default if animation is actually gonna happen
+                event.preventDefault();
+                $('html, body').animate({
+                scrollTop: target.offset().top
+                }, 100, function() {
+                // Callback after animation
+                // Must change focus!
+                var $target = $(target);
+                $target.focus();
+                if ($target.is(":focus")) { // Checking if the target was focused
+                    return false;
+                } else {
+                    $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+                    $target.focus(); // Set focus again
+                };
+                });
+            }
+            }
+        });
+
     </script>
 </html>

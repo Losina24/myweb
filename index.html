@@ -16,7 +16,7 @@
 <body>
     <!-- Header -->
     <header class="header">
-        <a id="logo" class="iso-link ch-left" href="index"><img id="lgo" src="../resources/logoblack.svg" alt="Isotipo"></a>
+        <a id="logo" class="iso-link ch-left" href="index"><img id="lgo" src="resources/logoblack.svg" alt="Isotipo"></a>
 
         <div class="container-header ch-mid">
             <a href="#" class="link-main">Servicios</a>
@@ -29,6 +29,11 @@
             <a class="link-socials" href="https://wa.me/+34653162169" target="_blank"><i class="fab fa-whatsapp"></i></a>
             <a class="link-socials" href="https://www.linkedin.com/in/alejandrolosagarc%C3%ADa/" target="_blank"><i class="fab fa-linkedin-in .text-dark"></i></a>
             <a class="link-socials" href="https://github.com/Losina24" target="_blank"><i class="fab fa-github"></i></a>
+            <div class="hamburger" id="hamburger-1">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+            </div>
         </div>
     </header>
 
@@ -42,8 +47,7 @@
             <button id="cta" class="btn-grad">Contáctame</button>
         </article>
 
-        <!-- <img class="imagen-main" src="../resources/undraw_accept_tasks_po1c.svg" alt="Ilustración"> -->
-        <img class="imagen-main-2" src="../resources/coding_ (1).svg" alt="Ilustración">
+        <img class="imagen-main-2" src="resources/coding_ (1).svg" alt="Ilustración">
     </main>
 
     <!-- Servicios -->
@@ -71,15 +75,29 @@
         })
 
         $('#logo').on('mouseenter', () => {
-            $('#lgo').attr('src', '../resources/logoanimadp.svg');
+            $('#lgo').attr('src', 'resources/logoanimadp.svg');
         })
         .on('mouseout', () => {
-            $('#lgo').attr('src', '../resources/logoblack.svg');
+            $('#lgo').attr('src', 'resources/logoblack.svg');
         });
 
         $('#cta').on('click', () => {
             window.location.href = "https://wa.me/+34653162169";
         })
+        
+        $(document).ready(function(){
+            $(".hamburger").click(function(){
+                $(this).toggleClass("is-active");
+            });
+        });
 
+        $(window).on("scroll", function() {
+            if($(window).scrollTop() > 50) {
+                $(".header").addClass("headeroff");
+            } else {
+                //remove the background property so it comes transparent again (defined in your css)
+            $(".header").removeClass("headeroff");
+            }
+        });
     </script>
 </html>

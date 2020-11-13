@@ -12,17 +12,20 @@
     <link href="styles.css" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/kursor/dist/kursor.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+
+    <link rel="shortcut icon" href="resources/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="resources/favicon.ico" type="image/x-icon">
 </head>
 
 <body>
     <!-- Header -->
     <header class="header">
-        <a id="logo" class="iso-link ch-left" href="index"><img id="lgo" src="resources/logoblack.svg" alt="Isotipo"></a>
+        <a id="logo" class="iso-link ch-left" href="#top"><img id="lgo" src="resources/logoblack.svg" alt="Isotipo"></a>
 
         <div class="container-header ch-mid">
             <a href="#servicios-smooth" class="link-main">Servicios</a>
-            <a href="#" class="link-main">Habilidades</a>
-            <a href="#" class="link-main">Proyectos</a>
+            <a href="#skill-smooth" class="link-main">Habilidades</a>
+            <a href="#work-smooth" class="link-main">Proyectos</a>
             <a href="#" class="link-main">Contacto</a>
         </div>
 
@@ -38,9 +41,25 @@
         </div>
     </header>
 
+    <!-- Menu -->
+    <nav class="menu-lateral">
+        <div class="d-flex flex-column">
+            <a href="#servicios-smooth" class="link-menu">Servicios</a>
+            <a href="#skill-smooth" class="link-menu">Habilidades</a>
+            <a href="#work-smooth" class="link-menu">Proyectos</a>
+            <a href="" class="link-menu">Contacto</a>
+
+            <div>
+                <a class="link-menu" href="https://wa.me/+34" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                <a class="link-menu" href="https://www.linkedin.com/in/alejandrolosagarc%C3%ADa/" target="_blank"><i class="fab fa-linkedin-in .text-dark"></i></a>
+                <a class="link-menu" href="https://github.com/Losina24" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+    </nav>
+
     <!-- Main -->
     <main>
-        <article class="section-main">
+        <article id="top" class="section-main">
             <!-- &#128760 -->
             <h1 class="titulo-mobile">Hola! Soy <span class="color-especial">Alejandro</span>.<br>Desarrollador <span class="color-especial">Full</span> stack.</h1>
             <h1 class="titulo">Hola!<br> Soy <span class="color-especial">Alejandro</span>.<br>Desarrollador<br><span class="color-especial">Full</span> stack.</h1>
@@ -49,11 +68,19 @@
         </article>
 
         <img class="imagen-main-2" src="resources/coding_ (1).svg" alt="Ilustración">
+        
+        <div class="scroll"> <!-- Scroll down --> 
+            <a href="#">
+                <div class="mouse">
+                    <div class="wheel"></div>
+                </div>
+            </a>
+        </div>
     </main>
 
     <!-- Servicios -->
-    <h2 id="servicios-smooth" class="titulo-h2" data-aos="fade-right">¿Qué hago?</h2>
-    <p class="texto-servicio" data-aos="fade-right">Desde el diseño de la interfaz, hasta el mantenimiento y gestión del servidor y la base de datos,  pasando por todo el proceso de desarrollo de la aplicación (web o móvil).</p>
+    <h2 class="titulo-h2" data-aos="fade-right">¿Qué hago?</h2>
+    <p id="servicios-smooth"  class="texto-servicio" data-aos="fade-right">Desde el diseño de la interfaz, hasta el mantenimiento y gestión del servidor y la base de datos,  pasando por todo el proceso de desarrollo de la aplicación (web o móvil).</p>
     <section class="section-servicios">
         <article data-aos="fade-up">
             <img class="imagen-icono" src="resources/designer_.svg" alt="Diseño UX/UI">
@@ -79,6 +106,74 @@
             </div>
         </article>
     </section>
+
+    <!-- Habilidades -->
+    <h2 class="titulo-h2 titulo-habilidades" data-aos="fade-right">Habilidades</h2>
+    <p id="skill-smooth" class="texto-servicio" data-aos="fade-right">Mis aptitudes y conocimientos sobre el sector.</p>
+    <section class="section-habilidades">
+        <article id="skill1" class="round-skill" data-aos="fade-up">
+            <h3>HTML</h3>
+            <h4>100%</h4>
+            <img src="resources/skill1.svg" alt="Skill 1" class="skill-grafica">
+        </article>
+        <article id="skill2" class="round-skill" data-aos="fade-up">
+            <h3>CSS</h3>
+            <h4>100%</h4>
+            <img src="resources/skill1.svg" alt="Skill 2" class="skill-grafica">
+        </article>
+        <article id="skill3" class="round-skill" data-aos="fade-up">
+            <h3>JavaScript</h3>
+            <h4>88%</h4>
+            <img src="resources/skill2.svg" alt="Skill 3" class="skill-grafica">
+        </article>
+        <article id="skill4" class="round-skill" data-aos="fade-up">
+            <h3>PHP</h3>
+            <h4>80%</h4>
+            <img src="resources/skill3.svg" alt="Skill 4" class="skill-grafica">
+        </article>
+        <article id="skill5" class="round-skill" data-aos="fade-up">
+            <h3>Python</h3>
+            <h4>70%</h4>
+            <img src="resources/skill4.svg" alt="Skill 5" class="skill-grafica">
+        </article>
+    </section>
+
+    <!-- Proyectos -->
+    <h2 class="titulo-h2 titulo-habilidades" data-aos="fade-right">Proyectos</h2>
+    <p id="work-smooth" class="texto-servicio" data-aos="fade-right">Algunos de los proyectos que he realizado últimamente.</p>
+    <section class="section-work">
+        <a href="https://www.behance.net/gallery/105478605/EasyField-Web-Application" target="_blank" id="work1" class="work" data-aos="fade-up">
+            <img src="resources/2.png" alt="Skill 1" class="skill-grafica">
+            <div>
+                <h3>EasyField</h3>
+                <p>Diseño UX/UI y Desarrollo de aplicación web</p>
+            </div>
+        </a>
+
+        <a href="https://www.behance.net/gallery/101300163/4Real-Clothing-Website" target="_blank" id="work2" class="work" data-aos="fade-up">
+            <img src="resources/3.png" alt="Skill 2" class="skill-grafica">
+            <div>
+                <h3>4Real Clothing</h3>
+                <p>Diseño UX/UI, Desarrollo de aplicación web y Gestión del servidor</p>
+            </div>
+        </a>
+
+        <a href="https://www.behance.net/gallery/105478605/EasyField-Web-Application" target="_blank" id="work1" class="work" data-aos="fade-up">
+            <img src="resources/2.png" alt="Skill 1" class="skill-grafica">
+            <div>
+                <h3>EasyField</h3>
+                <p>Diseño UX/UI y Desarrollo de aplicación web</p>
+            </div>
+        </a>
+
+        <a href="https://www.behance.net/gallery/101300163/4Real-Clothing-Website" target="_blank" id="work2" class="work" data-aos="fade-up">
+            <img src="resources/3.png" alt="Skill 2" class="skill-grafica">
+            <div>
+                <h3>4Real Clothing</h3>
+                <p>Diseño UX/UI, Desarrollo de aplicación web y Gestión del servidor</p>
+            </div>
+        </a>
+    </section>
     
 </body>
 
@@ -90,6 +185,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/8d96a2d252.js" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" integrity="sha512-uto9mlQzrs59VwILcLiRYeLKPPbS/bT71da/OEBYEwcdNUk8jYIy+D176RYoop1Da+f9mvkYrmj5MCLZWEtQuA==" crossorigin="anonymous"></script>
 
     <!-- Kursor.js -->
     <script src="https://cdn.jsdelivr.net/npm/kursor@0.0.14/dist/kursor.js"></script>
@@ -100,7 +196,7 @@
             type: 2,
             removeDefaultCursor: true,
             color: "#02edac"
-        })
+        });
         
         $('#logo').on('mouseenter', () => {
             if($(window).scrollTop() > 50){
@@ -122,11 +218,39 @@
             window.location.href = "https://wa.me/+34";
         })
         
+        var activeMenu = 0;
+        
         $(document).ready(function(){
             $(".hamburger").click(function(){
-                $(this).toggleClass("is-active");
+
+                $('.hamburger').toggleClass("is-active");
+                $('.hamburger').children().toggleClass("burger-click");
+
+                $("nav").stop().slideToggle();
+                if(activeMenu == 0){
+                    $('html').css({
+                        overflow: 'hidden'
+                    });
+                    $("#lgo").stop().animate({opacity: '0%'});
+                    activeMenu = 1;
+                } else {
+                    $('html').css({
+                        overflow: 'auto'
+                    });
+                    $("#lgo").stop().animate({opacity: '100%'});
+                    activeMenu = 0;
+                }
             });
         });
+
+        $('.link-menu').on('click', () => {
+            $('.hamburger').removeClass("is-active");
+            $('.hamburger').children().removeClass("burger-click");
+            $("nav").stop().slideToggle();
+            $('html').css({ overflow: 'auto' });
+            $("#lgo").stop().animate({opacity: '100%'});
+            activeMenu = 0;
+        })
 
         $(window).on("scroll", function() {
             if($(window).scrollTop() > 50) {
@@ -135,12 +259,14 @@
                 $(".link-main").addClass('blanco');
                 $(".link-socials").addClass('blanco-social');
                 $(".line").css('background-color', '#fafafa');
+                $(".scroll").stop().animate({opacity: '0%'}, 250);
             } else {
                 $(".header").removeClass("headeroff");
                 $("#lgo").attr('src', 'resources/logoblack.svg');
                 $(".link-main").removeClass('blanco');
                 $(".link-socials").removeClass('blanco-social');
                 $(".line").css('background-color', '#171717');
+                $(".scroll").stop().animate({opacity: '100%'}, 250);
             }
         });
 

@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link href="styles.css" rel="stylesheet">
+    <link href="estilos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/kursor/dist/kursor.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
 
@@ -18,6 +18,11 @@
 </head>
 
 <body>
+    <!-- Alertas -->
+    <div class="alert alert-success fade" role="alert">
+        <strong>Correcto!</strong> Tu correo se ha enviado con éxito.
+    </div>
+
     <!-- Header -->
     <header class="header">
         <a id="logo" class="iso-link ch-left" href="#top"><img id="lgo" src="resources/logoblack.svg" alt="Isotipo"></a>
@@ -26,7 +31,7 @@
             <a href="#servicios-smooth" class="link-main">Servicios</a>
             <a href="#skill-smooth" class="link-main">Habilidades</a>
             <a href="#work-smooth" class="link-main">Proyectos</a>
-            <a href="#" class="link-main">Contacto</a>
+            <a href="#form" class="link-main">Contacto</a>
         </div>
 
         <div class="container-header ch-right">
@@ -47,7 +52,7 @@
             <a href="#servicios-smooth" class="link-menu">Servicios</a>
             <a href="#skill-smooth" class="link-menu">Habilidades</a>
             <a href="#work-smooth" class="link-menu">Proyectos</a>
-            <a href="" class="link-menu">Contacto</a>
+            <a href="#form" class="link-menu">Contacto</a>
 
             <div>
                 <a class="link-menu" href="https://wa.me/+34" target="_blank"><i class="fab fa-whatsapp"></i></a>
@@ -86,7 +91,7 @@
             <img class="imagen-icono" src="resources/designer_.svg" alt="Diseño UX/UI">
             <div>
                 <h3>Diseño UX/UI</h3>
-                <p>Diseño de interfaz y experiencia de usuario. Tanto de aplicaciones móviles, como de páginas web.</p>
+                <p>Diseño de interfaz y experiencia de usuario de la aplicación.</p>
             </div>
         </article>
 
@@ -166,7 +171,7 @@
             </div>
         </a>
 
-        <a href="https://www.behance.net/gallery/101300163/4Real-Clothing-Website" target="_blank" id="work2" class="work" data-aos="fade-up">
+        <a href="#" target="_blank" id="work2" class="work" data-aos="fade-up">
             <img src="resources/5.png" alt="Skill 4" class="skill-grafica">
             <div>
                 <h3>HKManager</h3>
@@ -174,6 +179,44 @@
             </div>
         </a>
     </section>
+
+    <!-- Contacto -->
+    <h2 class="titulo-h2 titulo-habilidades titulo-last" data-aos="fade-right">Contacto</h2>
+    <p id="form" class="texto-servicio" data-aos="fade-right">¡Contáctame para lo que necesites!</p>
+    <section class="section-form" data-aos="fade-up">
+        <form method="post">
+            <label for="nombre">Nombre</label>
+            <input class="css-input" name="nombre" id="nombre" type="text" placeholder="Escribe tu nombre" required>
+            <label for="email">Email</label>
+            <input class="css-input" name="email" id="email" type="email" placeholder="Escribe tu email" required>
+            <label for="email">Mensaje</label>
+            <textarea class="css-input" name="mensaje" id="mensaje" cols="30" rows="4" placeholder="Escribe tu mensaje" required></textarea>
+            <p class="info">Al hacer click en Enviar, aceptas que alejandrolosa.es guarde y haga uso de esta información personal.
+            </p>
+            <button id="submit" class="btn-grad" type="submit">Enviar</button>
+          </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>Copyright © 2020 alejandrolosa.es | <a href="terminos">Términos y condiciones</a> | <a href="cookies">Política de cookies</a></p>
+    </footer>
+
+    <!-- Cookies -->
+    <?php
+        if(!isset($_COOKIE["aceptar-cookies-alejandro"])){ ?>
+        <section class="cookies">
+            <div class="div-uno">
+                <h3>Cookies</h3>
+                <p>Este sitio utiliza cookies para mejorar el servicio. Si continúa, se considera que acepta el uso. <a class="a-fu" href="cookies">Más info.</a></p>
+            </div>
+            <div class="div-dos">
+                <a class="aceptar-cookies">Aceptar</a>
+            </div>
+        </section>
+	<?php
+	}
+	?>
     
 </body>
 
@@ -306,6 +349,31 @@
             }
             }
         });
+        
+        $('#submit').on('click', (event) => {
+            event.preventDefault();
+            var formData = $('form').serialize();
 
+            $.ajax({
+				type: "post",
+				url: "mail.php",
+				data: formData
+			})
+			.done(function(res){
+                $('.alert').show();
+                $('input').val('');
+                $('textarea').val('');
+                setTimeout(() => {
+                    $('.alert').hide();
+                }, 2000)
+            })
+        })
+
+        $('.aceptar-cookies').on('click', function(){
+			var oneYearFromNow = new Date();
+			oneYearFromNow.setFullYear(oneYearFromNow.getFullYear() + 1);
+			document.cookie = "aceptar-cookies-alejandro=true; "+oneYearFromNow+";";
+			$('.cookies').css('display', 'none');
+		})
     </script>
 </html>

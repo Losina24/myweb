@@ -270,7 +270,6 @@
         });
 
         $('#cta').on('click', () => {
-            //window.location.href = "https://wa.me/+34653162169";
 			window.location.href = "#form";
         })
         

@@ -15,6 +15,16 @@
 
     <link rel="shortcut icon" href="resources/favicon.ico" type="image/x-icon">
     <link rel="icon" href="resources/favicon.ico" type="image/x-icon">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1JYKZ8NF86"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-1JYKZ8NF86');
+    </script>
 </head>
 
 <body>
@@ -35,7 +45,8 @@
         </div>
 
         <div class="container-header ch-right">
-            <a class="link-socials" href="https://wa.me/+34" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            <!--<a class="link-socials" href="https://wa.me/+34" target="_blank"><i class="fab fa-whatsapp"></i></a>-->
+            <!--<a class="link-socials" href="#" target="_blank"><i class="fab fa-whatsapp"></i></a>-->
             <a class="link-socials" href="https://www.linkedin.com/in/alejandrolosagarc%C3%ADa/" target="_blank"><i class="fab fa-linkedin-in .text-dark"></i></a>
             <a class="link-socials" href="https://github.com/Losina24" target="_blank"><i class="fab fa-github"></i></a>
             <div class="hamburger" id="hamburger-1">
@@ -55,7 +66,8 @@
             <a href="#form" class="link-menu">Contacto</a>
 
             <div>
-                <a class="link-menu" href="https://wa.me/+34" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                <!--<a class="link-menu" href="https://wa.me/+34" target="_blank"><i class="fab fa-whatsapp"></i></a>-->
+                <!--<a class="link-menu" href="#" target="_blank"><i class="fab fa-whatsapp"></i></a>-->
                 <a class="link-menu" href="https://www.linkedin.com/in/alejandrolosagarc%C3%ADa/" target="_blank"><i class="fab fa-linkedin-in .text-dark"></i></a>
                 <a class="link-menu" href="https://github.com/Losina24" target="_blank"><i class="fab fa-github"></i></a>
             </div>
@@ -84,8 +96,8 @@
     </main>
 
     <!-- Servicios -->
-    <h2 class="titulo-h2" data-aos="fade-right">¿Qué hago?</h2>
-    <p id="servicios-smooth"  class="texto-servicio" data-aos="fade-right">Desde el diseño de la interfaz, hasta el mantenimiento y gestión del servidor y la base de datos,  pasando por todo el proceso de desarrollo de la aplicación (web o móvil).</p>
+    <h2 id="servicios-smooth" class="titulo-h2" data-aos="fade-right">¿Qué hago?</h2>
+    <p class="texto-servicio" data-aos="fade-right">Desde el diseño de la interfaz, hasta el mantenimiento y gestión del servidor y la base de datos,  pasando por todo el proceso de desarrollo de la aplicación (web o móvil).</p>
     <section class="section-servicios">
         <article data-aos="fade-up">
             <img class="imagen-icono" src="resources/designer_.svg" alt="Diseño UX/UI">
@@ -113,8 +125,8 @@
     </section>
 
     <!-- Habilidades -->
-    <h2 class="titulo-h2 titulo-habilidades" data-aos="fade-right">Habilidades</h2>
-    <p id="skill-smooth" class="texto-servicio" data-aos="fade-right">Mis aptitudes y conocimientos sobre el sector.</p>
+    <h2 id="skill-smooth" class="titulo-h2 titulo-habilidades" data-aos="fade-right">Habilidades</h2>
+    <p class="texto-servicio" data-aos="fade-right">Mis aptitudes y conocimientos sobre el sector.</p>
     <section class="section-habilidades">
         <article id="skill1" class="round-skill" data-aos="fade-up">
             <h3>HTML</h3>
@@ -144,8 +156,8 @@
     </section>
 
     <!-- Proyectos -->
-    <h2 class="titulo-h2 titulo-habilidades" data-aos="fade-right">Proyectos</h2>
-    <p id="work-smooth" class="texto-servicio" data-aos="fade-right">Algunos de los proyectos que he realizado últimamente.</p>
+    <h2 id="work-smooth" class="titulo-h2 titulo-habilidades" data-aos="fade-right">Proyectos</h2>
+    <p class="texto-servicio" data-aos="fade-right">Algunos de los proyectos que he realizado últimamente.</p>
     <section class="section-work">
         <a href="https://www.behance.net/gallery/105478605/EasyField-Web-Application" target="_blank" id="work1" class="work" data-aos="fade-up">
             <img src="resources/2.png" alt="Skill 1" class="skill-grafica">
@@ -181,8 +193,8 @@
     </section>
 
     <!-- Contacto -->
-    <h2 class="titulo-h2 titulo-habilidades titulo-last" data-aos="fade-right">Contacto</h2>
-    <p id="form" class="texto-servicio" data-aos="fade-right">¡Contáctame para lo que necesites!</p>
+    <h2 id="form" class="titulo-h2 titulo-habilidades titulo-last" data-aos="fade-right">Contacto</h2>
+    <p class="texto-servicio" data-aos="fade-right">¡Contáctame para lo que necesites!</p>
     <section class="section-form" data-aos="fade-up">
         <form method="post">
             <label for="nombre">Nombre</label>
@@ -258,7 +270,8 @@
         });
 
         $('#cta').on('click', () => {
-            window.location.href = "https://wa.me/+34";
+            //window.location.href = "https://wa.me/+34653162169";
+			window.location.href = "#form";
         })
         
         var activeMenu = 0;
@@ -375,5 +388,13 @@
 			document.cookie = "aceptar-cookies-alejandro=true; "+oneYearFromNow+";";
 			$('.cookies').css('display', 'none');
 		})
+
+        (function() {
+            if (document.location.hash) {
+                setTimeout(function() {
+                    window.scrollTo(window.scrollX, window.scrollY - 100);
+                }, 10);
+            }
+        })();
     </script>
 </html>

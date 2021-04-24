@@ -382,9 +382,10 @@
         })
 
         $('.aceptar-cookies').on('click', function(){
-			var oneYearFromNow = new Date();
-			oneYearFromNow.setFullYear(oneYearFromNow.getFullYear() + 1);
-			document.cookie = "aceptar-cookies-alejandro=true; "+oneYearFromNow+";";
+			var d = new Date();
+            d.setTime(d.getTime() + (365*24*60*60*1000));
+            var expires = "expires="+ d.toUTCString();
+			document.cookie = "aceptar-cookies-alejandro=true; expires="+expires+";";
 			$('.cookies').css('display', 'none');
 		})
 

@@ -16,11 +16,11 @@ $id = $_GET['id'];
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
-    <link href="estilos.css" rel="stylesheet">
-    <link href="enlaces.css" rel="stylesheet">
+    <link href="../estilos.css" rel="stylesheet">
+    <link href="../enlaces.css" rel="stylesheet">
 
-    <link rel="shortcut icon" href="resources/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="resources/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="../resources/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../resources/favicon.ico" type="image/x-icon">
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-1JYKZ8NF86"></script>
@@ -36,7 +36,7 @@ $id = $_GET['id'];
 <body>
     <!-- Header -->
     <header class="header">
-        <a id="logo" class="iso-link ch-left" href="#top"><img id="lgo" src="resources/logoblack.svg" alt="Isotipo"></a>
+        <a id="logo" class="iso-link ch-left" href="#top"><img id="lgo" src="../resources/logoblack.svg" alt="Isotipo"></a>
 
         <div class="container-header ch-mid">
             <!--<a href="#servicios-smooth" class="link-main">Servicios</a>
@@ -96,7 +96,7 @@ $id = $_GET['id'];
 
     <!-- Footer -->
     <footer>
-        <p>Copyright © 2020 alejandrolosa.es | <a href="terminos">Términos y condiciones</a> | <a
+        <p>Copyright © 2020 alejandrolosa.es | <a href="../terminos">Términos y condiciones</a> | <a
                 href="cookies">Política de cookies</a></p>
     </footer>
 

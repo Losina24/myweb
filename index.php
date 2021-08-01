@@ -129,27 +129,27 @@
     <p class="texto-servicio" data-aos="fade-right">Mis aptitudes y conocimientos sobre el sector.</p>
     <section class="section-habilidades">
         <article id="skill1" class="round-skill" data-aos="fade-up">
-            <h3>HTML</h3>
+            <h3>PHP</h3>
             <h4>100%</h4>
             <img src="resources/skill1.svg" alt="Skill 1" class="skill-grafica">
         </article>
         <article id="skill2" class="round-skill" data-aos="fade-up">
-            <h3>CSS</h3>
+            <h3>Angular</h3>
             <h4>100%</h4>
             <img src="resources/skill1.svg" alt="Skill 2" class="skill-grafica">
         </article>
         <article id="skill3" class="round-skill" data-aos="fade-up">
-            <h3>JavaScript</h3>
+            <h3>Node.js</h3>
             <h4>88%</h4>
             <img src="resources/skill2.svg" alt="Skill 3" class="skill-grafica">
         </article>
         <article id="skill4" class="round-skill" data-aos="fade-up">
-            <h3>PHP</h3>
+            <h3>React</h3>
             <h4>80%</h4>
             <img src="resources/skill3.svg" alt="Skill 4" class="skill-grafica">
         </article>
         <article id="skill5" class="round-skill" data-aos="fade-up">
-            <h3>Python</h3>
+            <h3>Laravel</h3>
             <h4>70%</h4>
             <img src="resources/skill4.svg" alt="Skill 5" class="skill-grafica">
         </article>
@@ -159,6 +159,22 @@
     <h2 id="work-smooth" class="titulo-h2 titulo-habilidades" data-aos="fade-right">Proyectos</h2>
     <p class="texto-servicio" data-aos="fade-right">Algunos de los proyectos que he realizado últimamente.</p>
     <section class="section-work">
+        <a href="http://platges.vinaros.es" target="_blank" id="work1" class="work" data-aos="fade-up">
+            <img src="resources/6.png" alt="Skill 1" class="skill-grafica">
+            <div>
+                <h3>Platges Vinaros</h3>
+                <p>Desarrollo de aplicación web y Gestión del servidor</p>
+            </div>
+        </a>
+
+        <a href="#" target="_blank" id="work2" class="work" data-aos="fade-up">
+            <img src="resources/7.png" alt="Skill 2" class="skill-grafica">
+            <div>
+                <h3>Sudle</h3>
+                <p>Diseño UX/UI, Desarrollo de aplicación web y Gestión del servidor</p>
+            </div>
+        </a>
+
         <a href="https://www.behance.net/gallery/105478605/EasyField-Web-Application" target="_blank" id="work1" class="work" data-aos="fade-up">
             <img src="resources/2.png" alt="Skill 1" class="skill-grafica">
             <div>
@@ -183,10 +199,10 @@
             </div>
         </a>
 
-        <a href="#" target="_blank" id="work2" class="work" data-aos="fade-up">
+        <a href="https://hatsukimanga.com" target="_blank" id="work2" class="work" data-aos="fade-up">
             <img src="resources/5.png" alt="Skill 4" class="skill-grafica">
             <div>
-                <h3>HKManager</h3>
+                <h3>Hatsuki</h3>
                 <p>Diseño UX/UI, Desarrollo de aplicación web y Gestión del servidor</p>
             </div>
         </a>
